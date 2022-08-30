@@ -12,23 +12,27 @@ function Main() {
 
         const table = (
             <div>
-                {accountData!.workoutProgram.map((workout: { exrecises: { exreciseName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; sets: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; reps: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }[]; }) => {
-                    (
-                        <table>
-                            <tr>
-                                <th>Exrecise</th>
-                                <th>Sets</th>
-                                <th>Reps</th>
-                                <th>Explanation Link</th>
-                            </tr>
-                            {workout.exrecises.map((exrecise: { exreciseName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; sets: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; reps: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>
+                {accountData!.workoutProgram.map((workout: { dayNumber: string | number | boolean | React.ReactFragment | React.ReactPortal | React.ReactElement<any, string | React.JSXElementConstructor<any>> | null | undefined; dayName: string | number | boolean | React.ReactFragment | React.ReactPortal | React.ReactElement<any, string | React.JSXElementConstructor<any>> | null | undefined; exrecises: { exreciseName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; sets: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; reps: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }[]; }) => {
+                    return (
+                        <div>
+                            <h2>Day {workout.dayNumber}: {workout.dayName}</h2>
+                            <table>
                                 <tr>
-                                    <td>{exrecise.exreciseName}</td>
-                                    <td>{exrecise.sets}</td>
-                                    <td>{exrecise.reps}</td>
+                                    <th>Exrecise</th>
+                                    <th>Sets</th>
+                                    <th>Reps</th>
+                                    <th>Explanation Link</th>
                                 </tr>
-                            )}
-                        </table>
+                                {workout.exrecises.map((exrecise: { exreciseName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; sets: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; reps: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) =>
+                                    <tr>
+                                        <td>{exrecise.exreciseName}</td>
+                                        <td>{exrecise.sets}</td>
+                                        <td>{exrecise.reps}</td>
+                                        <td>{exrecise.reps}</td>
+                                    </tr>
+                                )}
+                            </table>
+                        </div>
                     )
                 })}
             </div>

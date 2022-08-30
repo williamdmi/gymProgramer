@@ -28,3 +28,38 @@ header {
 
     }
 }
+
+table {
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: white;
+    border: 1px solid #000000;
+    background-color: #4A4A4A;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  table td, table th {
+    border: 1px solid #4A4A4A;
+    padding: 10px;
+  }
+  table tbody td {
+    font-size: 13px;
+    color: #E6E6E6;
+  }
+  table tr:nth-child(even) {
+    background: #888888;
+  }
+  table thead {
+    background: #000000;
+    border-bottom: 3px solid #000000;
+  }
+  table thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #E6E6E6;
+    text-align: center;
+    border-left: 2px solid #4A4A4A;
+  }
+  table thead th:first-child {
+    border-left: none;
+  }
+  
