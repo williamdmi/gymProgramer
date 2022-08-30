@@ -14,6 +14,7 @@ function Header() {
                     <li>About</li>
                     <li>Contact</li>
                     <li>Shop</li>
+                    <li className="login">Login</li>
                 </ul>
             </div>
         </header>
