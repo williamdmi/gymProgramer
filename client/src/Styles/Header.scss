@@ -1,0 +1,14 @@
+header {
+    .header {
+        margin: 0 10% 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            margin: 10px;   
+            display: inline-block;
+        }
+    }
+    background-color: rgb(25, 15, 83);
+    color: white;
+}
